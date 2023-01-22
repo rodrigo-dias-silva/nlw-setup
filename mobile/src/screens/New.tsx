@@ -25,7 +25,7 @@ export default function New() {
   async function handleCreateNewHabit() {
     try {
       if (!title.trim() || weekDays.length === 0) {
-        Alert.alert('Hum..', 'Parece que você não informou nenhum hábito ou a periodicidade.')
+        return Alert.alert('Hum..', 'Parece que você não informou nenhum hábito ou a periodicidade.')
       }
       await api.post('habits', { title, weekDays })
 
